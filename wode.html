@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <style type="text/css">
+	    	*{
+	    		margin: 0;
+	    		padding: 0;
+	    		list-style: none;
+	    		text-decoration: none;
+	    	}
+	    	span{
+	    		display: inline-block;
+	    	}
+	    	#box{
+	    		width: 100%;
+	    		height: 100%;
+	    		background: #F9F9F9;
+	    	}
+	    	#box>#tobu{
+	    		width: 100%;
+	    		height: 94rem;
+	    		background: url(img/wodeyi.png) no-repeat;
+	    		background-size: 100%;
+	    	}
+	    	#tobu>p{
+	    		width: 100%;
+	    	}
+	    	#tobu>p>img{
+	    		width: 100%;
+	    	}
+	    	#tobu>#shang{
+	    		margin-top: 6rem;
+	    		margin-bottom: 4rem;
+	    		width:94%;
+	    		padding-left: 3rem;
+	    		/*border: 1px solid black;*/
+	    		align-items: center;
+	    		display: flex;
+	    		/*position: fixed;
+	    		top: 12.2rem;*/
+	    	}
+	    	#tobu>#shang>ul{
+	    		margin-left: 5rem;
+	    	}
+	    	#tobu>#shang>p:first-child{
+	    		width: 20.3rem;
+	    		height: 21rem;
+	    	}
+	    	#tobu>#shang>p:first-child>img{
+	    		width: 100%;	    		
+	    	}
+	    	#tobu>#shang>ul>li{
+	    		color: white;
+	    		font-size: 5rem;
+	    	}
+	    	#tobu>#shang>ul>li:last-child{
+	    		width: 29.7rem;	    
+	    	}
+	    	#tobu>#shang>ul>li:last-child>img{
+	    		width: 29.7rem;	    		
+	    	}
+	    	#tobu>#shang>p:last-child{
+	    		width: 46.4rem;
+	    		height: 21rem;
+	    		/*border: 1px solid black;*/
+	    		display: flex;
+	    	}
+	    	#tobu>#shang>p:last-child>span:first-child{
+	    		width: 90%;
+	    		margin-top: 2rem;
+	    		margin-right: 2rem;
+	    		text-align: right;
+	    	}
+	    	#tobu>#shang>p:last-child>span:first-child>img{
+	    		width: 4.9rem;
+	    		height: 4.9rem;
+	    	}
+	    	#tobu>#shang>p:last-child>span:last-child>img{
+	    		width: 6.7rem;
+	    		height: 6.9rem;
+	    	}
+	    	#tobu>#xia{
+	    		width: 94%;
+	    		height: 36rem;
+	    		border-radius: 1rem;
+	    		box-shadow: 0 0 2px gray;
+	    		margin: 0 auto;
+	    		background: white;
+	    	}
+	    	#tobu>#xia>p{
+	    		margin-left:6% ;
+	    		width: 94%;
+	    		font-size: 4rem;
+	    		height: 12rem;
+	    		display: flex;
+	    		justify-content: space-between;
+	    		align-items: center;
+	    		border-bottom: 1px solid gainsboro;
+	    	}
+	    	#tobu>#xia>p>span:nth-child(2){
+	    		margin-left: 2rem;
+	    	}
+	    	#tobu>#xia>p>span:nth-child(2){
+	    		margin-right: 6rem;
+	    	}
+	    	#tobu>#xia>p>span:nth-child(2)>img{
+	    		width: 1.9rem;
+	    		height: 3.7rem;
+	    	}
+	    	#tobu>#xia>ul:nth-child(2){
+	    		margin-top: 6rem;
+	    		height: 18rem;
+	    		display: flex;
+	    		justify-content: space-around;
+	    	}
+	    	#tobu>#xia>ul:nth-child(2)>li{
+	    		font-size:3rem;
+	    		text-align: center;
+	    	}
+	    	#tobu>#xia>ul:nth-child(2)>li>p:first-child{
+	    		margin-bottom: 2rem;
+	    		height: 6rem;
+	    	}
+	    	#tobu>#xia>ul:nth-child(2)>li>p:first-child>img{	    		
+	    		height: 6rem;
+	    	}
+	    	#tobu>ul{
+	    		width: 94%;
+	    		margin: 0 auto;
+	    		height: 16rem;
+	    		background: white;
+	    		display: flex;
+	    		justify-content: space-between;
+	    		align-items: center;
+	    		border-radius:1rem ;
+	    		margin-top: 4rem;
+	    	}
+	    	#tobu>ul>li{
+	    		display: flex;
+	    		font-size: 3rem;
+	    		align-items: center;
+	    	}
+	    	#tobu>ul>li:first-child>p{
+	    		margin-left: 6rem;
+	    	}
+	    	#tobu>ul>li:last-child{
+	    		margin-right: 6rem;
+	    	}
+	    	#tobu>ul>li:first-child>p>img{
+	    		width: 4.9rem;
+	    		height: 4.9rem;
+	    	}
+	    	#nei{
+	    		width: 94%;
+	    		margin: 0 auto;
+	    	}	    	
+	    	#nei>ul{
+	    		display: flex;
+	    		width: 100%;
+	    		height: 16rem;
+	    		border-radius:1rem ;
+	    		background: white;
+	    		justify-content: space-between;
+	    		align-items: center;
+	    		margin-top: 3.5rem;
+	    	}
+	    	#nei>ul>li{
+	    		display: flex;
+	    		font-size: 3rem;
+	    		align-items: center;
+	    	}
+	    	#nei>ul>li:first-child>p{
+	    		margin-left: 6rem;
+	    	}
+	    	#nei>ul>li:last-child{
+	    		margin-right: 6rem;
+	    	}
+	    	#nei>ul>li:last-child>img{
+	    		width: 1.9rem;
+	    		height: 3.7rem;
+	    	}
+	    	#nei>ul>li:first-child>p>img{
+	    		width: 4.9rem;
+	    		height: 4.9rem;
+	    	}
+	    	#di{
+	    		margin-top: 3rem;
+	    		width: 100%;
+	    		background: white;
+	    	}
+	    	#di>ul{
+	    		display: flex;
+	    		justify-content: space-around;
+	    	}
+	    	#di>ul>li{
+	    		margin-top: 1rem;
+	    		font-size: 2.5rem;
+	    		text-align: center;
+	    	}
+	    	#di>ul>li>p>img{
+	    		width: 6.2rem;
+	    	}
+	    	a{
+	    		color: black;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="tobu">
+				<p><img src="img/dao (1).png"/></p>
+				<div id="shang">
+					<p><img src="img/wodesi.png"/></p>
+					<ul>
+						<li>千图网</li>
+						<li><img src="img/wodesan.png"/></li>
+					</ul>
+					<p><span><img src="img/shezhi.png"/></span><span><img src="img/5.png"/></span></p>
+				</div>
+				<div id="xia">
+					<p><span>我的订单</span><span><img src="img/zuo.png"/></span></p>
+					<ul>
+						<li>
+							<p><img src="img/daifu.png"/></p>
+							<p>待付款</p>
+						</li>
+						<li>
+							<p><img src="img/daifa.png"/></p>
+							<p>待收货</p>
+						</li>
+						<li>
+							<p><img src="img/daiping.png"/></p>
+							<p>待评价</p>
+						</li>
+						<li>
+							<p><img src="img/shoho.png"/></p>
+							<p>退款/售后</p>
+						</li>
+					</ul>					
+				</div>
+				<ul>
+					<li>
+						<p><img src="img/shocang.png"/></p>
+						<p>我的收藏</p>
+					</li>
+					<li><img src="img/zuo.png" style="width: 1.9rem; height: 3.7rem;"/></li>
+				</ul>
+			</div>
+			<div id="nei">
+				<ul>
+					<li>
+						<p><img src="img/shocang.png"/></p>
+						<p>我的收藏</p>
+					</li>
+					<li><img src="img/zuo.png"/></li>
+				</ul>
+				<ul>
+					<li><p><img src="img/wodepingjia.png"/></p><p>我的评价</p></li>
+					<li><img src="img/zuo.png"/></li>
+				</ul>
+				<ul>
+					<li><p><img src="img/youhiu.png"/></p><p>我的优惠券</p></li>
+					<li><img src="img/zuo.png"/></li>
+				</ul>
+				<ul>
+					<li><p><img src="img/bangzhu.png"/></p><p>帮助中心</p></li>
+					<li><img src="img/zuo.png"/></li>
+				</ul>
+				<ul>
+					<li><p><img src="img/guanyuwomen.png"/></p><p>关于我们</p></li>
+					<li><img src="img/zuo.png"/></li>
+				</ul>
+			</div>
+			<div id="di">
+				<ul>
+					<li>
+						<p><img src="img/SaaS (3).png"/></p>
+						<p><a href="index.html">首页</a></p>
+					</li>
+					<li>
+						<p><img src="img/SaaS (4).png"/></p>
+						<p><a href="fanfan.html">分类</a></p>
+					</li>
+					<li>
+						<p><img src="img/SaaS (1).png"/></p>
+						<p><a href="gowu.html">购物车</a></p>
+					</li>
+					<li>
+						<p><img src="img/SaaS-(2)_03.png"/></p>
+						<p>我的</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+</html>

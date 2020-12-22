@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				background: #f4f4f4;
+				position: relative;
+				height: 11rem;
+				
+			}
+			.top{
+				width: 100%;
+				height: 0.8rem;
+				display: flex;
+				align-items: center;
+				position: absolute;
+				/*top: 0.14rem;*/
+			}
+			.top>ul{
+				width: 100%;
+				height: 0.46rem;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.top>ul>li{
+				display: flex;
+			}
+			.top>ul>li:nth-child(1){
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>ul>li>a{
+				display: flex;
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(1)>a>img{
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(2){
+				width: 2.90rem;
+				height: 0.3rem;
+				position: relative;
+			}
+			.top>ul>li:nth-child(2)>img{
+				width: 0.16rem;
+				height: 0.16rem;
+				position: absolute;
+				top: 0.08rem;
+				left: 0.12rem;
+			}
+			.top>ul>li:nth-child(2)>input{
+				width: 2.50rem;
+				height: 0.3rem;
+				border: none;
+				font-size: 0.1rem;
+				padding-left: 0.4rem;
+				border-radius: 0.15rem;
+				background: #f5f5f5;
+				opacity: 0.5;
+			}
+			.top>ul>li:nth-child(3){
+				width: 0.24rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(3)>img{
+				width: 0.24rem;
+				height: 0.3rem;
+			}
+			.midd{
+				width: 100%;
+				padding-bottom: 0.05rem;
+				background: url(img/juxing.jpg) no-repeat;
+				background-size: 100% 70%;
+				background-color: white;
+				overflow: hidden;
+			}
+			.midd>div{
+				width: 90%;
+				margin: 0 auto;
+				
+			}
+			.midd>.one{
+				height: 0.6rem;
+				margin-top: 0.7rem;
+				display: flex;
+				align-items: center;
+			}
+			.midd>.one>ul{
+				width: 100%;
+				height: 0.36rem;
+				color: white;
+				font-size: 0.14rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.midd>.one>ul>li{
+				height: 0.36rem;
+			}
+			.midd>.one>ul>li:first-child{
+				width: 0.37rem;
+				height: 0.37rem;
+			}
+			.midd>.one>ul>li:first-child>img{
+				width: 0.37rem;
+				height: 0.37rem;
+			}
+			.midd>.one>ul>li:nth-child(2){
+				width: 2.26rem;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(1){
+				font-size: 0.14rem;
+				font-weight: bold;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(2){
+				font-size: 0.1rem;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(2)>span:first-child{
+				display: inline-block;
+				width: 0.64rem;
+				height: 0.14rem;
+				border-radius: 0.07rem;
+				background: #24e2b1;
+				text-align: center;
+				line-height: 0.14rem;
+			}
+			.midd>.one>ul>li:nth-child(3){
+				width: 0.62rem;
+				height: 0.32rem;
+				text-align: center;
+				line-height: 0.32rem;
+				background: #24e2b1;
+				border-radius: 0.1rem;
+				font-weight: bold;
+			}
+			.two{
+				width: 100%;
+				height: 0.38rem;
+			}
+			.two>ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.two>ul>li{
+				width: 15%;
+				height: 0.2rem;
+				font-size: 0.14rem;
+				display: flex;
+				justify-content: center;
+			}
+			.two>ul>li>p{
+				height: 0.20rem;
+				padding-bottom: 0.05rem;
+				color: white;
+				/* border-bottom: 2px solid white; */
+			}
+			.three{
+				height: 0.56rem;
+			}
+			
+			.four{
+				height: 1.08rem;
+				margin-top: 0.05rem;
+				padding-top: 0.1rem;
+			}
+			.aaa .swiper-slide{
+				width: 1.20rem;
+				height: 0.56rem;
+				background: url(img/dianyou.png) no-repeat;
+				background-size: 100% 100%;
+				display: flex;
+			}
+			.aaa .swiper-slide>div:nth-child(1){
+				width: 60%;
+				height: 100%;
+				color: white;
+			/* 	display: flex;
+				flex-wrap: wrap; */
+				font-size: 0.1rem;
+				/* align-items: center; */
+			}
+			.aaa .swiper-slide>div:nth-child(1)>p{
+				width: 100%;
+				height: 0.15rem;
+				text-align: center;
+			}
+			.aaa .swiper-slide>div:nth-child(1)>p:first-child{
+				margin-top: 0.05rem;
+				margin-bottom: 0.09rem;
+			}
+			.aaa .swiper-slide>div:nth-child(1)>p>span{
+				font-size: 0.2rem;
+			}
+			.aaa .swiper-slide>div:nth-child(2){
+				width: 40%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+			}
+			.aaa .swiper-slide>div:nth-child(2)>p{
+				font-size: 10px;
+				width: 0.52rem;
+				height: 0.14rem;
+				background: orange;
+				border-radius: 0.06rem;
+				text-align: center;
+				line-height: 0.14rem;
+				margin-bottom: 0.1rem;
+				font-weight: bold;
+				color: white;
+			}
+			.bbb{
+				width: 100%;
+				height: 100%;
+			}
+			.bbb>div{
+				width: 100%;
+				height: 100%;
+			}
+			.bbb .swiper-slide{
+				width: 100%;
+				height: 100%;
+				background: url(img/juxing-kao.png) no-repeat;
+				background-size: 100% 100%;
+				border-radius: 0.1rem;
+			}
+			.lie{
+				width: 100%;
+				background: white;
+				margin-top: 0.1rem;
+			}
+			.lie>div:nth-child(1){
+				width: 100%;
+				height: 0.4rem;
+				display: flex;
+			}
+			.lie>div:nth-child(1)>p{
+				width: 25%;
+				height: 0.4rem;
+				text-align: center;
+				line-height: 0.4rem;
+				font-size: 0.15rem;
+			}
+			.lie>div:nth-child(2){
+				width: 100%;
+				display: flex;
+				border-top: 1px solid #f7f7f7;
+				border-bottom: 1px solid #f7f7f7;
+			}
+			.lie>div:nth-child(2)>ul{
+				width: 50%;
+				height: 2.7rem;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.lie>div:nth-child(2)>ul>li{
+				width: 1.66rem;
+			}
+			.lie>div:nth-child(2)>ul>li:first-child{
+				margin-top: 0.1rem;
+				height: 1.76rem;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.lie>div:nth-child(2)>ul>li:first-child>img{
+				width: 1.12rem;
+				height: 1.06rem;
+			}
+			.lie>div:nth-child(2)>ul>li:first-child>p{
+				width: 0.3rem;
+				height: 0.16rem;
+				background: #2fd7a6;
+				text-align: center;
+				line-height: 0.16rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 0.1rem;
+				color: white;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(2){
+				
+				font-size: 0.14rem;
+				font-weight: bold;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(3){
+				margin-top: 0.05rem;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(3)>p{
+				width: 0.6rem;
+				height: 0.2rem;
+				font-size: 0.1rem;
+				font-weight: bold;
+				border-radius: 0.15rem;
+				border: 1px solid #fdb794;
+				color: #fdb794;
+				text-align: center;
+				line-height: 0.2rem;
+				
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(4){
+				font-size: 0.14rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(4)>p:first-child{
+				color: #30d7a6;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(4)>p:nth-child(2){
+				font-size: 0.1rem;
+				width: 0.25rem;
+				height: 0.15rem;
+				border-radius: 0.02rem;
+				text-align: center;
+				line-height: 0.15rem;
+				color: white;
+				background: #fdb794;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(4)>p:nth-child(3){
+				width: 0.84rem;
+				display: flex;
+				justify-content: flex-end;
+			}
+			.lie>div:nth-child(2)>ul>li:nth-child(4)>p:nth-child(3)>img{
+				width: 0.24rem;
+				height: 0.24rem;
+			}
+			.foot{
+				width: 100%;
+				height: 0.5rem;
+				font-size: 0.15rem;
+				background: white;
+				padding-top: 0.1rem;
+				position: fixed;
+				bottom: 0rem;
+			}
+			.foot>ul{
+				width: 95%;
+				height: 100%;
+				margin: 0 auto;
+				display: flex;
+			}
+			.foot>ul>li{
+				width: 1.64rem;
+				height: 100%;
+				text-align: center;
+				line-height: 0.5rem;
+				font-weight: bold;
+			}
+			.foot>ul>li img{
+				width: 0.18rem;
+				height: 0.18rem;
+				vertical-align: middle;
+			}
+			.foot>ul>li:last-child{
+				width: 0.62rem;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.foot>ul>li:last-child>p{
+				width: 100%;
+				font-size: 0.1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.foot>ul>li:last-child>p:last-child{
+				height: 0.1rem;
+				color: #15d29a;
+			}
+			.foot>ul>li:last-child img{
+				width: 0.2rem;
+				height: 0.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="top">
+				<ul>
+					<li><a href="index.html"><img src="img/zuowo.png" ></a></li>
+					<li><img src="img/sousuo.png" ><input type="text" name="" id="" value="" placeholder="搜索商品"/></li>
+					<li><img src="img/dianyesan.png" ></li>
+				</ul>
+			</div>
+			<div class="midd">
+				<div class="one">
+					<ul>
+						<li><img src="img/dianqi.png"/></li>
+						<li>
+							<p><a href="dianpuxinxi.html " style="color: white;">千图网生鲜水果店</a></p>
+							<p>
+								<span>官方自营</span>
+								<span>2.6</span>万人关注
+							</p>
+						</li>
+						<li>+&nbsp;关注</li>
+					</ul>
+				</div>
+				<div class="two">
+					<ul>
+						<li><p><a href="index.html" style="color: white;">首页</a></p></li>
+						<li><p>促销</p></li>
+						<li><p>上新</p></li>
+						<li><p><a href="dongtai.html" style="color: white;">动态</a></p></li>
+					</ul>
+				</div>
+				<div class="three">
+					<div class="swiper-container aaa">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ">
+								<div>
+									<p>￥<span>200</span></p>
+									<p>满899元可用</p>
+								</div>
+								<div>
+									<p><a href="zhuanqu.html" style="color: white;">点击领取</a></p>
+								</div>
+							</div>
+							<div class="swiper-slide b">
+								<div>
+									<p>￥<span>600</span></p>
+									<p>满899元可用</p>
+								</div>
+								<div>
+									<p><a href="zhuanqu.html" style="color: white;">点击领取</a></p>
+								</div>
+							</div>
+							<div class="swiper-slide c">
+								<div>
+									<p>￥<span>100</span></p>
+									<p>满899元可用</p>
+								</div>
+								<div>
+									<p><a href="zhuanqu.html" style="color: white;">点击领取</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="four">
+					<div class="swiper-container bbb">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide a"></div>
+							<div class="swiper-slide b"></div>
+							<div class="swiper-slide c"></div>
+							<div class="swiper-slide d"></div>
+							<div class="swiper-slide e"></div>
+						</div>
+						<div class="swiper-pagination"></div> <!-- 分页器 -->
+					</div>
+				</div>
+			</div>
+			<div class="lie">
+				 <div>
+					 <p>推荐</p>
+					 <p>销量</p>
+					 <p>新品</p>
+					 <p>价格</p>
+				 </div>
+				 <div>
+					 <ul class="ulo">
+						 <li>
+							 <p>上新</p>
+							 <img src="img/huolong.png" >
+						 </li>
+						 <li>国产红心火龙果600g起</li>
+						 <li><p>满99减20</p></li>
+						 <li>
+							 <p>￥39.00</p>
+							 <p>抢购</p>
+							 <p><img src="img/gouwucheman.png" ></p>
+						 </li>
+					 </ul>
+					 <ul>
+						 <li>
+							 <p>上新</p>
+							 <img src="img/huolong.png" >
+						 </li>
+						 <li>国产红心火龙果600g起</li>
+						 <li><p>满99减20</p></li>
+						 <li>
+							 <p>￥39.00</p>
+							 <p>抢购</p>
+							 <p><img src="img/gouwucheman.png" ></p>
+						 </li>
+					 </ul>
+				 </div>
+			</div>
+			<div class="lie">
+				 <div>
+					 <p>推荐</p>
+					 <p>销量</p>
+					 <p>新品</p>
+					 <p>价格</p>
+				 </div>
+				 <div>
+					 <ul class="ulo">
+						 <li>
+							 <p>上新</p>
+							 <img src="img/huolong.png" >
+						 </li>
+						 <li>国产红心火龙果600g起</li>
+						 <li><p>满99减20</p></li>
+						 <li>
+							 <p>￥39.00</p>
+							 <p>抢购</p>
+							 <p><img src="img/gouwucheman.png" ></p>
+						 </li>
+					 </ul>
+					 <ul>
+						 <li>
+							 <p>上新</p>
+							 <img src="img/huolong.png" >
+						 </li>
+						 <li>国产红心火龙果600g起</li>
+						 <li><p>满99减20</p></li>
+						 <li>
+							 <p>￥39.00</p>
+							 <p>抢购</p>
+							 <p><img src="img/gouwucheman.png" ></p>
+						 </li>
+					 </ul>
+				 </div>
+			</div>
+			<div class="foot">
+				<ul>
+					<li><img src="img/leibie.png" > <span><a href="fanfan.html">商品分类</a></span></li>
+					<li><a href="dianpuxinxi.html">店铺详情</a></li>
+					<li>
+						<p><img src="img/lianxi.png" ></p>
+						<p>联系客服</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.aaa',{
+			// autoplay:true
+			slidesPerView: 2.3,
+			spaceBetween: 10,
+			  // loop:true,//循环播放
+			  mousewheel: true,
+			  
+		})
+		var mySwiper = new Swiper('.bbb',{
+			pagination: {
+			    el: '.swiper-pagination',//添加分页器
+				clickable :true,
+			  },
+			// slidesPerView: 2.3,
+			// spaceBetween: 10,
+			autoplay:true
+			// loop:true,//循环播放
+			// mousewheel: true,
+			  
+		})
+	</script>
+</html>

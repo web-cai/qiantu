@@ -1,0 +1,149 @@
+body,
+nav,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li,
+input,
+button,
+textarea,
+footer {
+    margin: 0;
+    padding: 0
+}
+body {
+    font: 100%/1.5 Helvetica, Arial, sans-serif, \5FAE\8F6F\96C5\9ED1;
+    -webkit-text-size-adjust: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+form {
+    display: inline
+}
+ul,
+ol {
+    list-style: none
+}
+img {
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    vertical-align: middle;
+    outline: none;
+}
+textarea {
+    resize: none
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button
+}
+input:focus:-moz-placeholder,
+input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}http://www.huiyi8.com/pingyu/?
+.fl {学生评语
+    float: left;
+}
+.fr {
+    float: right;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+.break {
+    word-break: break-all;
+    word-wrap: break-word
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+/* 垂直居中模块 */
+ 
+.vimg {
+    display: block;
+    text-align: center;
+    *font-family: Arial;
+    *font-size: expression(this.clientHeight*.895+"px");
+    line-height: 100%;
+    overflow: hidden;
+}
+.vimg img {
+    _width: expression((this.width>this.height && this.width>=this.parentNode.offsetWidth) ? this.parentNode.offsetWidth+‘px‘: true);
+    _height: expression((this.width<=this.height && this.height>=this.parentNode.offsetHeight) ? this.parentNode.offsetHeight+‘px‘: true);
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.vimg:after {
+    content: "\200B";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+header,
+footer,
+article,
+section,
+nav,
+menu,
+hgroup {
+    display: block;
+    clear: all;
+}
+/* 布局样式 */
+ 
+body {
+    color: #333
+}
+a {
+    text-decoration: none;
+    color: #333
+}

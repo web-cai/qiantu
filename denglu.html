@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				list-style: none;
+				text-decoration: none;
+			}
+			#box{
+				width: 100%;
+			}
+			#to{
+				height: 2.5rem;
+				background: url(img/beijing.png) no-repeat;
+				background-size: 100%;
+				display: flex;
+			}
+			#to>p{
+				width: 0.2rem;
+				height: 0.2rem;
+				display: flex;
+				margin-left: 3%;
+				margin-top: 8%;
+			}
+			#to>p>img{
+				width: 0.2rem;
+				height: 0.2rem;
+			}
+			#nei{
+				width: 94%;
+				margin: 0 auto;
+			}
+			#nei>ul{
+				display: flex;
+				width: 35%;
+				height: 0.4rem;
+				margin: 0 auto;
+			}
+			#nei>ul>li{
+				width: 50%;
+				font-size: 0.2rem;
+				height: 0.4rem;
+				display: flex;
+				align-items: center;
+				/*border-bottom: 1px solid black;*/
+			}
+			#nei>ul>li>p{
+				width: 0.5rem;
+				height: 0.4rem;
+				text-align: center;
+				line-height: 0.4rem;
+			}
+			.kk{
+				color: #15D29A;
+				border-bottom: 2px solid #24E2B1;
+			}
+			#nei>ul>li>span{			
+				display: inline-block;
+				height: 0.2rem;
+				border-right:2px solid #CECECE;
+				margin-left: 0.07rem;
+			}
+			/*#nei>ul>li:first-child>p{
+				height: 0.25rem;
+				border-right: 1px solid #CECECE;
+			}*/
+			#nei>.deng{
+				width: 100%;
+			}
+			#nei>.deng>p{
+				margin-top: 0.2rem;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				font-size: 0.2rem;
+				height: 0.5rem;
+				border-radius: 0.08rem;
+				box-shadow: 0 0 2px darkgray;
+			}
+			#nei>.deng>p>img{
+				width: 0.25rem;
+				height: 0.25rem;
+				margin-left: 0.2rem;
+				margin-right: 0.2rem;
+			}
+			#nei>.deng>p>input{
+				border: 0px;
+			}
+			#xia{
+				width: 100%;
+			}
+			#xia>p:first-child{
+				margin-top: 0.2rem;
+				width: 100%;
+				height:0.5rem; 
+				font-size: 0.2rem;
+				color: white;
+				background: #52B3AA;
+				border-radius: 0.08rem;
+				text-align: center;
+				line-height: 0.5rem;
+			}
+			#xia>p:last-child{
+				margin-top: 0.2rem;
+				width: 100%;
+				font-size: 0.2rem;
+				text-align: center;
+				color: #BABABA;
+			}						
+			#nei>.zhu{
+				width: 100%;
+			}
+			#nei>.zhu>p{
+				margin-top: 0.1rem;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				font-size: 0.2rem;
+				height: 0.5rem;
+				border-radius: 0.08rem;
+				box-shadow: 0 0 2px darkgray;
+			}
+			#nei>.zhu>p>img{
+				width: 0.25rem;
+				height: 0.25rem;
+				margin-left: 0.2rem;
+				margin-right: 0.2rem;
+			}
+			#nei>.zhu>p>input{
+				border: 0px;
+			}	
+			#xia1{
+				width: 100%;
+			}
+			#xia1>p:last-child{
+				margin-top: 0.1rem;
+				width: 100%;
+				height:0.5rem; 
+				font-size: 0.2rem;
+				color: white;
+				background: #52B3AA;
+				border-radius: 0.08rem;
+				text-align: center;
+				line-height: 0.5rem;
+			}
+			#xia1>p:first-child{
+				margin-top: 0.1rem;
+				width: 100%;
+				font-size: 0.1rem;
+				text-align: center;
+				color: #CBCBCB;
+			}	
+			#xia1>p:first-child>span{
+				color: #6DA9AD;
+			}
+			.zhu{
+				display: none;
+			}
+			a{
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="to">
+				<p><img src="img/off.png"/></p>
+			</div>
+			<div id="nei">
+				<ul>
+					<li><p id="deng" class="kk">登录</p><span></span></li>
+					<li><p id="zhu">注册</p></li>
+				</ul>
+				<div class="deng">
+					<p><img src="img/idcard.png"/> <input type="text" placeholder="请输入身份证" id="shen" value="" /></p>
+					<p><img src="img/password.png"/> <input type="password" placeholder="请输入密码" id="mi" value="" /></p>
+					<div id="xia">
+						<p class="dian"><a href="#">登录</a></p>
+						<p>忘记密码?</p>
+					</div>
+				</div>
+				<div class="zhu">
+					<p><img src="img/name.png"/> <input type="text" placeholder="请输入姓名" id="ming" value="" /></p>
+					<p><img src="img/iphone.png"/> <input type="text" placeholder="请输手机号" id="hao" value="" /></p>
+					<p><img src="img/idcard.png"/> <input type="text" placeholder="请输入身份证" id="shu" value="" /></p>
+					<p><img src="img/password.png"/> <input type="password" placeholder="请设置密码" id="mima" value="" /></p>
+					<p><img src="img/password.png"/> <input type="password" placeholder="请确定密码" id="quema" value="" /></p>
+					<div id="xia1">
+						<p>注册即代表您已同意 《<span>注册与使用协议</span>》</p>
+						<p id="ce">注册</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#zhu').click(function(){
+				$('.zhu').show();
+				$('.deng').hide();
+				$('#zhu').addClass('kk');
+				$('#deng').removeClass('kk');
+			})
+			$('#deng').click(function(){
+				$('.zhu').hide();
+				$('.deng').show();
+				$('#deng').addClass('kk');
+				$('#zhu').removeClass('kk');
+			})
+			/*$('.dian').click(function(){
+				if ($('#shen').val().length==16) {
+					alert(456);
+					$('a').attr('href','index.html');
+				}else{
+					alert(123);
+				}				
+			})*/
+			function aa(){
+				var rag=/^[\u2E80-\u9FFF]+$/;
+				if(rag.test($('#ming').val())==false){
+					alert('姓名格式错误')
+					return false;
+				}else{
+					return true;
+				}
+			}
+			function bb(){
+				var rag=/[0-9]{11}/;
+				if(rag.test($('#hao'). val())==false){
+					alert('手机格式错误');
+					return false;
+				}else{
+					return true;
+				}
+			}
+			function cc(){
+				var a=/^[1-8][1-7]\d{4}(?:19|20)\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\d{3}[\dX]$/;
+				if(a.test($('#shu').val()) == false){
+					alert('身份证错误');
+					return false;
+				}else{
+					return true
+				}
+			}
+			function dd(){
+				var b=/^[A-Z]{1}[A-Z a-z 0-9 -]{3,16}$/;
+				if(b.test($('#mima').val()) == false){
+					alert('密码错误');
+					return false;
+				}else if($('#quema').val()!= $('#mima').val()){
+					alert('密码不一致');
+					return false;
+				}else{
+					
+					return true;
+				}
+			}			
+			$('#ce').click(function(){
+				if (aa() == false || bb() == false || cc()== false || dd() == false) {
+					return false;
+				}else{
+					alert('注册成功');
+					$('.zhu').hide();
+					$('.deng').show();
+					$('#deng').addClass('kk');
+					$('#zhu').removeClass('kk');
+				}
+			})
+			function kk(){
+				var a=/^[1-8][1-7]\d{4}(?:19|20)\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\d{3}[\dX]$/;
+				if(a.test($('#shen').val()) == false){
+					alert('身份证错误');
+					return false;
+				}else{
+					return true
+				}
+			}
+			function ll(){
+				var b=/^[A-Z]{1}[A-Z a-z 0-9 -]{3,16}$/;
+				if(b.test($('#mi').val()) == false){
+					alert('密码错误');
+					return false;
+				}else{
+					return true
+				} 
+			}
+			$('.dian').click(function(){
+				if(kk()== false || ll()==false){
+					return false;
+				}else{
+					$('a').attr('href','index.html');
+				}
+			})
+	 })
+	</script>
+</html>

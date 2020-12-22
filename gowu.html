@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				/* height: 100%; */
+				padding-bottom: 50%;
+				background: #f8f8f8;
+			}
+			.top{
+				width: 90%;
+				height: 0.74rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+			}
+			.top>p{
+				height: 0.4rem;
+				height: 100%;
+				text-align: center;
+				line-height: 0.74rem;
+			}
+			.top>p:nth-child(1){
+				display: flex;
+				width: 15%;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.top>p>a{
+				display: flex;
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>p>a>img{
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>p:nth-child(2){
+				width: 70%;
+				font-size: 0.15rem;
+				font-weight: bold;
+			}
+			.top>p:nth-child(3){
+				width: 15%;
+				/* text-align: right; */
+				font-size: 0.13em;
+				color: #7c7c7c;
+			}
+			.lie{
+				width: 93%;
+				margin: 0 auto;
+				
+			}
+			.lie>div{
+				width: 100%;
+				background: white;
+				border-radius: 0.1rem;
+				/* padding: 0.1rem 0.1rem; */
+				/* padding-right: 0; */
+				margin-bottom: 0.15rem;
+				overflow: hidden;
+				box-shadow: 0 0 0.1rem #e3e2e2;
+			}
+			.lie>div>p{
+				color: #5d5d5d;
+				font-size: 0.1rem;
+				font-weight: bold;
+				margin-left: 0.1rem;
+				margin-top: 0.1rem;
+			}
+			.lie>div>p>span{
+				margin-left: 0.1rem;
+			}
+			.lie>div>p>input{
+				list-style: none;
+				width: 0.17rem;
+				height: 0.17rem;
+				border-radius: 100%;
+				background: orangered;
+			}
+			.lie>div>ul{
+				width: 3.3rem;
+				height: 1.16rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-left: 0.1rem;
+				font-weight: bold;
+				
+			}
+			.lie>div>ul>li>input{
+				width: 0.17rem;
+				height: 0.17rem;
+			}
+			.lie>div>ul>li:nth-child(1){
+				width: 0.19rem;
+				height: 0.85rem;
+				display: flex;
+				align-items: center;
+			}
+			.lie>div>ul>li:nth-child(2){
+				width: 0.85rem;
+				height: 0.85rem;
+				display: flex;
+			}
+			.lie>div>ul>li:nth-child(2)>img{
+				width: 0.85rem;
+				height: 0.85rem;
+			}
+			.lie>div>ul>li:nth-child(3){
+				width: 2.08rem;
+				height: 0.85rem;
+				position: relative;
+			}
+			.lie>div>ul>li:nth-child(3)>p{
+				width: 100%;
+				font-size: 0.1rem;
+				color: #909090;
+				
+			}
+			.lie>div>ul>li:nth-child(3)>p:first-child{
+				font-size: 0.15rem;
+				font-weight: bold;
+				color: black;
+			}
+			.lie>div>ul>li:nth-child(3)>p:nth-child(4)>span{
+				color: #ee734d;
+			}
+			.lie>div>ul>li:nth-child(3)>p:nth-child(4)>span:first-child{
+				font-size: 0.15rem;
+				font-weight: bold;
+			}
+			.lie>div>ul>li:nth-child(3)>p:nth-child(4)>span:nth-child(2){
+				text-decoration:line-through;
+				color: #636363;
+			}
+			.lie>div>ul>li:nth-child(3)>p:nth-child(4)>span:nth-child(3){
+				display: inline-block;
+				width: 0.42rem;
+				height: 0.2rem;
+				border-radius: 0.1rem;
+				background: #fcefea;
+				text-align: center;
+				line-height: 0.2rem;
+				font-weight: bold;
+			}
+			.math{
+				width: 0.71rem;
+				height: 0.25rem;
+				border-radius: 0.12rem;
+				font-size: 0.15rem;
+				font-weight: bold;
+				display: flex;
+				justify-content: space-between;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border: 1px solid #f7f7f7;
+			}
+			.math>li{
+				width: 33%;
+				height: 100%;
+				text-align: center;
+				line-height: 0.25rem;
+				border-left: 1px solid #f7f7f7;
+				color: orangered;
+			}
+			.math>li:nth-child(2){
+				color: black;
+			}
+			.math>li:last-child{
+				width: 33%;
+				height: 100%;
+				text-align: center;
+				line-height: 0.25rem;
+				border: none;
+			}
+			.jie{
+				width: 90%;
+				height: 0.7rem;
+				position: fixed;
+				left: 0.25rem;
+				bottom: 0.2rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.jie>p{
+				height: 0.45rem;
+				font-size: 0.12rem;
+			}
+			.jie>p:first-child{
+				width: 0.52rem;
+				display: flex;
+				align-items: center;
+			}
+			.jie>p:nth-child(2){
+				width: 1.65rem;
+				line-height: 0.45rem;
+				text-align: right;
+			}
+			.jie>p:nth-child(2)>span{
+				color: orangered;
+				font-size: 0.17rem;
+				font-weight: bold;
+			}
+			.jie>p:nth-child(3){
+				width: 1.05rem;
+				line-height: 0.45rem;
+				text-align: center;
+				border-radius: 0.23rem;
+				background: url(../../img/我的/IMG_4629_03.png) no-repeat;
+				background-size: 100% 100%;
+				color: white;
+				font-size: 0.15rem;
+				font-weight: bold;
+				background: orangered;
+			}
+			.jie>p>input{
+				width: 0.17rem;
+				height: 0.17rem;
+			}
+			.box>p{
+				width: 100%;
+				height: 0.3rem;
+				display: flex;
+				align-items: center;
+			}
+			.box>p>img{
+				width: 3.75rem;
+			}
+			h2{
+				margin-left: 0.2rem;
+				font-size: 0.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!--<h2><a href="index.html">返回购物车</a></h2>-->
+			<div class="top">
+				<p><a href="index.html"><img src="img/zuowo.png"/></a></p>
+				<p>美食购物车</p>
+				<p>编辑</p>
+			</div>
+			<div class="lie">
+				<div>
+					<p><input type="checkbox" name="" id="xiao" value="" class="inp"/> <span>百香果</span></p>
+					<ul>
+						<li><input type="checkbox" name="" id="da" value="" class="inp"/></li>
+						<li><img src="img/IMG_4629_03.png" ></li>
+						<li>
+							<p>百香果PAGGODA【1KG】</p>
+							<p>【1KG】a=A级-三红蜜柚（中）超重</p>
+							<p>周一至周日，免预约</p>
+							<p style="color: orangered;">
+								￥<span id="span">8.9</span>
+								<span>￥32.9</span>
+								<span>4.38折</span>
+							</p>
+							<ul class="math">
+								<li class="jian">-</li>
+								<li class="num">0</li>
+								<li class="jia">+</li>
+							</ul>
+						</li>
+					</ul>
+					<ul>
+						<li><input type="checkbox" name="" id="da" value="" class="inp" /></li>
+						<li><img src="img/IMG_4629_06.png" ></li>
+						<li>
+							<p>百香果PAGGODA【500g】</p>
+							<p>【1KG】a=A级-三红蜜柚（中）超重</p>
+							<p>周一至周日，免预约</p>
+							<p style="color: orangered;">
+								￥<span id="span1">15.9</span>
+								<span>￥32.9</span>
+								<span>4.83折</span>
+							</p>
+							<ul class="math">
+								<li class="jian">-</li>
+								<li class="num">0</li>
+								<li class="jia">+</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><input type="checkbox" name="" id="yi" value="" class="inp"/></li>
+						<li><img src="img/IMG_4629_08.png" ></li>
+						<li>
+							<p>大山果业脆冬枣</p>
+							<p>脆冬枣，服务流程/时长：咨询商家</p>
+							<p>周一至周日，免预约</p>
+							<p style="color: orangered;">
+								￥<span id="span2">13.8</span>
+								<span>￥16.8</span>
+								<span>8.21折</span>
+							</p>
+							<ul class="math">
+								<li class="jian">-</li>
+								<li class="num">0</li>
+								<li class="jia">+</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="jie">
+				<p><input type="checkbox" name="" id="zong" value="" /> <span style="margin-left: 0.05rem;">全选</span></p>
+				<p>合计<span>￥</span><span id="span3">0</span></p>
+				<p>结算(<span>2</span>)</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.jia').click(function(){	
+				a=$(this).siblings('.num').html();
+				a++;
+				$(this).siblings('.num').html(a);
+		   })
+			$('.jian').each(function(){
+				$(this).click(function(){
+					var count = parseFloat($(this).siblings('.num').html());
+                    count--;
+					if(count<1){
+						return;
+					}
+					$(this).siblings('.num').html(count);
+				})
+				/*if(a<1){
+					 return;				
+				}else{
+					a--;
+					$(this).siblings('.num').html(a);
+				}	*/			
+				/*a--;
+				$(this).siblings('.num').html(a);*/
+		  })
+			/*$('.jie').click(function(){
+				var yi=$('#span').html()*$('.num').eq(0).html();
+				var er=$('#span1').html()*$('.num').eq(1).html();
+				var san=$('#span2').html()*$('.num').eq(2).html();
+				var zong=yi+er+san;
+				var zong1=zong.toFixed(2);
+				console.log(zong1);
+				$('#span3').html(zong1);
+			})*/
+		  /*$('#zong').click(function(){
+		  	alert('t')
+		  		if($(this).checked==true){
+		  			alert('55')
+			  		for(var i=0;i<$('.inp').length;i++){
+			  			$('.inp').eq(i).checked=true;
+			  		}
+			  	}			  		  	  	
+		  })*/
+		  $("#zong").click(function() {
+		      $(".inp, #zong").prop("checked", $(this).prop("checked"));
+		      /*getSum(); */ 		    
+		      /*if($(this).prop("checked")) {
+		          $(".cart-item").addClass("check-cart-item");
+		      } else {
+		         $(".cart-item").removeClass("check-cart-item");
+		     }*/
+		    if($('#zong').prop('checked')==true){
+		    	var yi=$('#span').html()*$('.num').eq(0).html();
+				var er=$('#span1').html()*$('.num').eq(1).html();
+				var san=$('#span2').html()*$('.num').eq(2).html();
+				var zong=yi+er+san;
+				var zong1=zong.toFixed(2);
+				console.log(zong1);
+				$('#span3').html(zong1);
+		    }		    
+		  })
+		  $('#xiao').click(function(){
+		  	$('#da,#xiao').prop('checked',$(this).prop('checked'));
+		  	if ($('#xiao').prop('checked')==true) {		  				 
+		  		var yi=$('#span').html()*$('.num').eq(0).html();
+				var er=$('#span1').html()*$('.num').eq(1).html();
+				var zong=yi+er;
+				var zong1=zong.toFixed(2);
+				$('#span3').html(zong1);
+		  	}	  		  	
+			 })
+		})
+	</script>
+</html>

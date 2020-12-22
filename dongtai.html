@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}		
+			.box{
+				width: 100%;
+				height: 13rem;
+				background: #f2f2f2;
+				position: relative;
+			}
+			.box>.div{
+				width: 97%;
+				height: 0.14rem;
+				display: flex;
+				margin: 0 auto;				
+				top: 0;
+			}
+			.box>.div>img{
+				width: 100%;
+			}
+			.top{
+				width: 100%;
+				height: 0.46rem;
+				display: flex;
+				align-items: center;
+				/* position: fixed; */
+				/* top: 0.14rem; */
+				position: absolute;
+			}
+			.top>ul{
+				width: 100%;
+				height: 0.46rem;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.top>ul>li{
+				display: flex;
+			}
+			.top>ul>li:nth-child(1){
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(1)>a{
+				width: 0.3rem;
+				height: 0.3rem;
+				display: flex;
+			}			
+			.top>ul>li:nth-child(1)>a>img{
+				width: 0.3rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(2){
+				width: 2.90rem;
+				height: 0.3rem;
+				position: relative;
+			}
+			.top>ul>li:nth-child(2)>img{
+				width: 0.16rem;
+				height: 0.16rem;
+				position: absolute;
+				top: 0.08rem;
+				left: 0.12rem;
+			}
+			.top>ul>li:nth-child(2)>input{
+				width: 2.50rem;
+				height: 0.3rem;
+				border: none;
+				font-size: 0.1rem;
+				padding-left: 0.4rem;
+				border-radius: 0.15rem;
+				/* background: rgba(1,1,1,0.6); */
+				background-color: #f5f5f5;		
+			}
+			.top>ul>li:nth-child(3){
+				width: 0.24rem;
+				height: 0.3rem;
+			}
+			.top>ul>li:nth-child(3)>img{
+				width: 0.24rem;
+				height: 0.3rem;
+			}
+			.midd{
+				width: 100%;
+				height: 1.66rem;
+				/* padding-bottom: 0.05rem; */
+				background: url(img/juxing.jpg) no-repeat;
+				background-size: 100% 150%;
+				overflow: hidden;
+			}
+			.midd>div{
+				width: 90%;				
+				margin: 0 auto;
+				
+			}
+			.midd>.one{
+				height: 0.6rem;
+				margin-top: 0.7rem;
+				display: flex;
+				align-items: center;
+			}
+			.midd>.one>ul{
+				width: 100%;
+				height: 0.36rem;
+				color: white;
+				font-size: 0.14rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.midd>.one>ul>li{
+				height: 0.36rem;
+			}
+			.midd>.one>ul>li:first-child{
+				width: 0.37rem;
+				height: 0.37rem;
+			}
+			.midd>.one>ul>li:first-child>img{
+				width: 0.37rem;
+				height: 0.37rem;
+			}
+			.midd>.one>ul>li:nth-child(2){
+				width: 2.26rem;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(1){
+				font-size: 0.14rem;
+				font-weight: bold;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(2){
+				font-size: 0.1rem;
+			}
+			.midd>.one>ul>li:nth-child(2)>p:nth-child(2)>span:first-child{
+				display: inline-block;
+				width: 0.64rem;
+				height: 0.14rem;
+				border-radius: 0.07rem;
+				background: #24e2b1;
+				text-align: center;
+				line-height: 0.14rem;
+				/* transform: scale(0.8); */
+			}
+			.midd>.one>ul>li:nth-child(3){
+				width: 0.62rem;
+				height: 0.32rem;
+				text-align: center;
+				line-height: 0.32rem;
+				background: #24e2b1;
+				border-radius: 0.1rem;
+				font-weight: bold;
+			}
+			.two{
+				width: 100%;
+				height: 0.38rem;
+			}
+			.two>ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.two>ul>li{
+				width: 15%;
+				height: 0.2rem;
+				font-size: 0.14rem;
+				display: flex;
+				justify-content: center;
+			}
+			.two>ul>li>p{
+				height: 0.20rem;
+				padding-bottom: 0.05rem;
+				color: white;
+				/* border-bottom: 2px solid white; */
+			}
+			.two>ul>li:last-child>p{
+				border-bottom: 3px solid #15D29A;
+			}
+			#nei{
+				width: 90%;
+				margin: 0 auto;
+				height: 4rem;
+			}
+			.middt{
+				width: 90%;
+				margin: 0 auto;
+				background: white;
+				margin-top: 0.2rem;
+				border-radius: 0.1rem;
+			}
+			.middt>ul{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.middt>ul>li{
+				width: 100%;
+			}
+			.middt>ul>li:first-child{
+				color: #6c6c6c;
+				font-size: 0.1rem;
+				height: 0.36rem;
+				line-height: 0.36rem;
+			}
+			.middt>ul>li:nth-child(2){
+				color: black;
+				font-size: 0.15rem;
+				font-weight: bold;				
+			}
+			.middt>ul>li:nth-child(2)>span{
+				color: #4eddb3;
+			}
+			.middt>ul>li:nth-child(3){
+				color: black;
+				font-size: 0.15rem;
+				font-weight: bold;
+				display: none;
+			}
+			.middt>ul>li:nth-child(3)>span{
+				color: #4eddb3;
+			}									
+			.middt>ul>li:nth-child(4){
+				height: 1.84rem;
+				margin-top: 0.05rem;
+				background: url(img/juxingba.png) no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+			}
+			.middt>ul>li:nth-child(4)>p{
+				width: 90%;
+				margin: 0 auto;
+			}
+			.middt>ul>li:nth-child(4)>p:first-child{
+				text-align: right;
+				font-size: 0.1rem;
+				color: white;
+				margin-top: 0.1rem;
+			}
+			.middt>ul>li:nth-child(4)>p:first-child>img{
+				width: 0.05rem;
+				height: 0.12rem;
+			}
+			.middt>ul>li:nth-child(4)>p:last-child{
+				/* text-align: center; */
+				font-size: 0.15rem;
+				color: white;
+				position: absolute;
+				bottom: 0;
+			}
+			.middt>ul>li:nth-child(5){
+				display: flex;
+				height: 0.4rem;
+				justify-content: space-between;
+			}
+			.middt>ul>li:nth-child(5)>p{
+				font-size: 0.1rem;
+				height: 0.4rem;
+				text-align: center;
+				line-height: 0.4rem;
+				width: 33%;
+			}
+			.middt>ul>li:nth-child(5)>p>img{
+				width: 0.15rem;
+				height: 0.15rem;
+			}
+			.foot{
+				width: 100%;
+				height: 0.5rem;
+				font-size: 0.15rem;
+				background: white;
+				position: fixed;
+				bottom: 0;
+			}
+			.foot>ul{
+				width: 95%;
+				height: 100%;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+			}
+			.foot>ul>li{
+				width: 1.6rem;
+				height: 0.2rem;
+				border-right: 1px solid darkgray;
+				text-align: center;
+				/* line-height: 0.5rem; */
+				font-weight: bold;
+			}
+			.foot>ul>li img{
+				width: 0.18rem;
+				height: 0.18rem;
+				vertical-align: middle;
+			}
+			.foot>ul>li:last-child{
+				width: 0.68rem;
+				display: flex;
+				flex-wrap: wrap;
+				border: none;
+			}
+			.foot>ul>li:last-child>p{
+				width: 100%;
+				font-size: 0.1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.foot>ul>li:last-child>p:last-child{
+				height: 0.1rem;
+				color: #15d29a;
+				margin-top: 0.05rem;
+				transform: scale(0.8);
+			}
+			.foot>ul>li:last-child img{
+				width: 0.15rem;
+				height: 0.15rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="top">
+				<ul>
+					<li><a href="dian.html"><img src="img/zuowo.png" ></a></li>
+					<li><img src="img/sousuo.png" ><input type="text" name="" id="" value="" /></li>
+					<li><img src="img/dianyesan.png" ></li>
+				</ul>
+			</div>
+			<div class="midd">
+				<div class="one">
+					<ul>
+						<li><img src="img/dianqi.png" ></li>
+						<li>
+							<p>千图网生鲜水果店</p>
+							<p>
+								<span>官方自营</span>
+								<span>2.6</span>万人关注
+							</p>
+						</li>
+						<li>+&nbsp;关注</li>
+					</ul>
+				</div>
+				<div class="two">
+					<ul>
+						<li><p><a href="index.html" style="color: white;">首页</a></p></li>
+						<li><p>促销</p></li>
+						<li><p>上新</p></li>
+						<li><p>动态</p></li>
+					</ul>
+				</div>
+			</div>
+			<div id="nei">
+				<div class="middt">
+					<ul>
+						<li>11月20日 17:00</li>
+						<li class="li">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的... <span class="quan">全文</span>
+						</li>
+						<li class="li1">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的橙子的清香，可以提，橙是白搭的好吃好吃<span class="sho">收起</span>
+						</li>
+						<li>
+							<p><img src="img/shandian.png" > 文章</p>
+							<p>优选水果之香橙：鲜榨果汁搭配首选，如此出众，快来看看吧</p>
+						</li>
+						<li>
+							<p><img src="img/fenxiang.png" > 转发</p>
+							<p><img src="img/xiaoyi.png" > 952</p>
+							<p><img src="img/guanzhu.png" > 498</p>
+						</li>
+					</ul>
+				</div>
+				<div class="middt">
+					<ul>
+						<li>11月20日 17:00</li>
+						<li class="li">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的... <span class="quan">全文</span>
+						</li>
+						<li class="li1">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的橙子的清香，可以提，橙是白搭的好吃好吃<span class="sho">收起</span>
+						</li>
+						<li>
+							<p><img src="img/shandian.png" > 文章</p>
+							<p>优选水果之香橙：鲜榨果汁搭配首选，如此出众，快来看看吧</p>
+						</li>
+						<li>
+							<p><img src="img/fenxiang.png" > 转发</p>
+							<p><img src="img/xiaoyi.png" > 952</p>
+							<p><img src="img/guanzhu.png" > 498</p>
+						</li>
+					</ul>
+				</div>
+				<div class="middt">
+					<ul>
+						<li>11月20日 17:00</li>
+						<li class="li">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的... <span class="quan">全文</span>
+						</li>
+						<li class="li1">
+							<span>#优选水果#</span>
+							刚拿到，橙子看着不错哦，买家秀来一波，一直都非常喜欢吃橙子，橙子的清香，可以提，橙是白搭的橙子的清香，可以提，橙是白搭的好吃好吃<span class="sho">收起</span>
+						</li>
+						<li>
+							<p><img src="img/shandian.png" > 文章</p>
+							<p>优选水果之香橙：鲜榨果汁搭配首选，如此出众，快来看看吧</p>
+						</li>
+						<li>
+							<p><img src="img/fenxiang.png" > 转发</p>
+							<p><img src="img/xiaoyi.png" > 952</p>
+							<p><img src="img/guanzhu.png" > 498</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="foot">
+				<ul>
+					<li><img src="img/leibie.png" > <span><a href="fanfan.html">商品分类</a></span></li>
+					<li><a href="dianpuxinxi.html">店铺详情</a></li>
+					<li>
+						<p><img src="img/lianxi.png" ></p>
+						<p>联系客服</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		for(var i=0;i<$('.quan').length;i++){
+			$('.quan').eq(i).click(function(){
+					$(this).parent('.li').hide();
+					$(this).parent().siblings('.li1').show();								
+			})
+		}
+		for(var i=0;i<$('.sho').length;i++){
+			$('.sho').eq(i).click(function(){
+					$(this).parent('.li1').hide();
+					$(this).parent().siblings('.li').show();								
+			})
+		}
+	</script>
+</html>

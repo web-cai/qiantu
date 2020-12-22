@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+			}
+			span{
+				display: inline-block;
+			}
+			#box{
+				width: 100%;
+				position: relative;
+			}
+			#box>p{
+				
+				height: 4.8rem;
+				width: 95%;
+				display: flex;
+				align-items: center;
+				margin: 0 auto;
+			}
+			#box>p>img{
+				width: 100%;
+			}
+			#so{
+				width: 95%;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+				margin-top: 1rem;
+			}
+			#so>p:first-child>img{
+				width: 6.4rem;
+				height: 6.4rem;
+			}
+			#so>p:first-child{
+				margin-right: 2rem;
+			}
+			#so>p:nth-child(2){
+				width: 83%;
+				background: #F1F0F0;
+				height: 8rem;
+				display: flex;
+				align-items: center;
+				border-radius: 4rem;
+			}
+			#so>p:nth-child(2)>input{
+				width: 60rem;
+				margin-left: 1rem;
+				height: 4rem;
+				border: 0px;
+				font-size: 2rem;
+				background: #F1F0F0;
+				font-size: 3rem;
+			}
+			#so>p:nth-child(2)>span>img{
+				width: 3.9rem;
+				height: 4rem;
+			}
+			#so>p:nth-child(2)>span{
+				margin-left:3rem ;
+			}
+			#so>p:last-child{
+				margin-left: 4rem;
+			}
+			#so>p:last-child>img{
+				width: 8.2rem;
+				height: 9.2rem;
+			}
+			#nei{
+				width: 97%;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 2rem;
+			}
+			#left{
+				width: 26rem;
+				/*border: 1px solid black;*/
+			}
+			#left>ul>li{
+				height: 14rem;
+				font-size: 4rem;
+				line-height: 14rem;
+				text-align: center;
+				background: #F2F2F2;
+				display: flex;
+				align-items: center;
+			}
+			#left>ul>li>p{
+				height: 8rem;
+				width: 26rem;
+				line-height: 8rem;
+				text-align: center;				
+			}
+			#left>ul>li:hover{
+				background: white;
+			}
+			#left>ul>li>p:hover{
+				color: #3FDAAD;
+				border-left:6px solid #3FDAAD;
+			}
+			#right{
+				width: 74.7rem;
+			}
+			#right>p{
+				margin-top: 7rem;
+				width: 74.7rem;
+				height: 25.6rem;
+			}
+			#right>p>img{
+				width: 100%;
+			}
+			#right>#top{
+				width: 100%;
+			}
+			#right>#top>p{
+				height: 9rem;
+				line-height: 9rem;
+				font-size: 3rem;
+				color: black;
+			}
+			#right>#top>ul{
+				height: 63rem;
+				width: 74.7rem;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				border-radius:1rem ;
+				box-shadow: 0 0 2px gray;
+			}
+			#right>#top>ul>li{
+				width: 24.9rem;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				font-size: 3rem;
+			}
+			#right>#top>ul>li>p>img{
+				width: 18rem;
+				height: 15rem;
+			}
+			#right>#top>ul>li>p:last-child{
+				text-align: center;
+				width: 100%;
+			}
+			#ding{
+				width: 100%;
+				height: 13rem;
+				box-shadow: 0 0 1px #676767;
+				position: fixed;
+				background: white;
+				bottom: 0rem;		
+			}
+			#ding>ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			#ding>ul>li{
+				width:21.25rem;
+				font-size: 3rem;
+				height: 13rem;
+				text-align: center;
+				/*border: 1px solid black;*/			
+			}
+			/*#ding>ul>li:hover{
+				border-radius: 6.5rem;
+				background: #3FDAAD;
+				color: white;
+			}
+			#ding>ul>li>p:first-child{
+				background: url(img/分类_05.png) no-repeat;
+				background-position:7.6rem 0 ;
+				z-index: 55;
+			}*/
+			#ding>ul>li:nth-child(2){
+				color: #15D29A;
+			}
+			#ding>ul>li>p:first-child{
+				margin-top:2rem ;
+			}
+			#ding>ul>li>p:first-child>img{
+				width: 6.2rem;
+				height: 6.2rem;
+			}
+			#ding>ul>li>p:last-child{
+				margin-bottom:1rem ;
+			}
+			.cu{
+				display: none;
+			}
+			.xi{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="so">
+				<p><img src="img/zuowo.png"/></p>
+				<p><span><img src="img/sousuo.png"/></span><input type="text" placeholder="搜索商品" name="" id="" value="" /></p>
+			    <p><img src="img/fenleisan.png"/></p>
+			</div>
+			<div id="nei">
+				<div id="left">
+					<ul>
+						<li><p>热门推荐</p></li>
+						<li><p>所有生鲜</p></li>
+						<li><p class="dian">时令水果</p></li>
+						<li><p class="dian1">促销水果</p></li>
+						<li><p class="dian2">西瓜蜜瓜</p></li>
+						<li><p>热带水果</p></li>
+						<li><p>休闲水果</p></li>
+						<li><p>现切水果</p></li>
+						<li><p>健康水果</p></li>
+						<li><p>新鲜蔬菜</p></li>
+						<li><p>水产生鲜</p></li>
+					</ul>
+				</div>
+				<div id="right">
+					<p><img src="img/banner.png"/></p>
+					<div id="top" class="shi">
+						<p>时令水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="xiangqing.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="xiangqing.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>促销水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>西瓜甜蜜</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+					</div>
+					<div id="top" class="cu">
+						<p>促销水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="xiangqing.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="xiangqing.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>西瓜甜蜜</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>时令水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+					</div>
+					<div id="top" class="xi">
+						<p>西瓜甜蜜</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="xiangqing.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="xiangqing.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>时令水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+						<p>促销水果</p>
+						<ul>
+							<li>
+								<p><img src="img/caokao.png"/></p>
+								<p><a href="fanfan.html">草莓</a></p>
+							</li>
+							<li>
+								<p><img src="img/huolong.png"/></p>
+								<p><a href="fanfan.html">火龙果</a></p>
+							</li>
+							<li>
+								<p><img src="img/cheng-kao.png"/></p>
+								<p><a href="fanfan.html">甜橙</a></p>
+							</li>
+							<li>
+								<p><img src="img/putao.png"/></p>
+								<p><a href="fanfan.html">葡萄</a></p>
+							</li>
+							<li>
+								<p><img src="img/mihotao.png"/></p>
+								<p><a href="fanfan.html">奇异果</a></p>
+							</li>
+							<li>
+								<p><img src="img/ningmeng.png"/></p>
+								<p><a href="fanfan.html">柠檬</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="ding">
+				<ul>					
+					<li>
+						<p><img src="img/gowudai.png"/></p>
+						<p><a href="index.html">首页</a></p>
+					</li>
+					<li>
+						<p><img src="img/qita1.png"/></p>
+						<p>分类</p>
+					</li>
+					<li>
+						<p><img src="img/fenleiliu.png"/></p>
+						<p><a href="gowu.html">购物车</a></p>
+					</li>
+					<li>
+						<p><img src="img/wowo_09.png"/></p>
+						<p><a href="wode.html">我的</a></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.dian1').click(function(){
+				$('.cu').show();
+				$('.shi').hide();
+				$('.xi').hide();
+			})
+			$('.dian2').click(function(){
+				$('.cu').hide();
+				$('.shi').hide();
+				$('.xi').show();
+			})
+			$('.dian').click(function(){
+				$('.shi').show();
+				$('.xi').hide();	
+				$('cu').hide();
+			})
+		})
+	</script>
+</html>

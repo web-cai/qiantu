@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<title></title>
+		<style type="text/css">
+			*{
+				outline-style: none;
+				text-decoration: none;
+			}
+			span{
+				display: inline-block;
+			}
+			#box{
+				width: 100%;
+				height: 8rem;
+				background: #F2F2F2;
+			}
+			#box>p{
+				width: 100%;
+				height: 0.5rem;
+				font-size: 0.2rem;
+				font-weight: bold;	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-bottom:1px solid gainsboro ;
+				background: white;
+			}
+			#box>p>span>a{
+				width: 0.35rem;
+				height: 0.35rem;
+			}
+			#box>p>span>a>img{
+				width: 0.35rem;
+				height: 0.35rem;
+			}
+			#box>p>span:last-child{
+				width: 90%;
+				text-align: center;
+			}
+			#shang{
+				width: 100%;
+				height: 0.8rem;
+				margin: 0 auto;
+				padding-top: 0.3rem;
+				display: flex;
+				align-items: center;
+				background: white;
+			}
+			#shang>p:first-child{
+				width: 0.8rem;
+				height: 0.8rem;
+				display: flex;
+			}
+			#shang>p:first-child>img{
+				width: 0.8rem;
+				height: 0.8rem;
+			}
+			#shang>ul{
+				width:56%;
+				height: 0.8rem;
+				margin-left: 0.2rem;
+			}
+			#shang>ul>li:first-child{
+				font-size: 0.2rem;
+				font-weight: bold;
+			}
+			#shang>ul>li:last-child{
+				margin-top:0.1rem ;
+				color: gray;
+				font-size: 0.1rem;
+			}
+			#shang>ul>li:last-child>img{
+				width: 0.8rem;
+				height: 0.2rem;
+			}
+			#shang>p:nth-child(3){
+				background: #2DD7A8;			
+				font-size: 0.2rem;
+				color: white;
+				width: 0.7rem;
+				height: 0.3rem;
+				text-align: center;
+				line-height: 0.3rem;
+				border-radius: 0.1rem;
+			}
+			#zhong{
+				width: 100%;
+				background: white;
+			}
+			#zhong>ul:first-child{
+				width: 100%;
+				display: flex;
+				height: 0.8rem;
+				align-items: center;
+				justify-content: space-around;
+				border-bottom: 1px solid gainsboro;			
+			}
+			#zhong>ul:first-child>li{
+				width: 25%;
+				font-size: 0.2rem;
+				text-align: center;			
+			}
+			#zhong>ul:first-child>li:first-child{
+				border-right: 1px solid gainsboro;
+			}
+			#zhong>ul:first-child>li:nth-child(2){
+				border-right: 1px solid gainsboro;
+			}
+			#zhong>ul:first-child>li:nth-child(3){
+				border-right: 1px solid gainsboro;
+			}
+			#zhong>ul:first-child>li>p:first-child{
+				font-weight: bold;
+			}
+			#zhong>ul:first-child>li>p:last-child{
+				font-size: 0.15rem;
+				color: gray;
+			}
+			#zhong>div{
+				width: 96%;
+				height:1.2rem;
+				margin: 0 auto;
+				margin-top: 0.1rem;
+			}
+			#zhong>div>ul{
+				width: 100%;
+				height: 0.32rem;
+				display: flex;
+			}
+			#zhong>div>ul>li{
+				margin-top: 0.1rem;
+				margin-right: 0.1rem;
+			}
+			#zhong>div>ul>li:first-child{
+				font-size: 0.15rem;
+				font-weight: bold;
+			}
+			#zhong>div>ul>li:nth-child(2){
+				font-size: 0.1rem;
+				color: #15D29A;
+			}
+			#zhong>div>ul>li:nth-child(3){
+				font-size: 0.1rem;
+				color: gray;
+			}
+			#xia{
+				margin-top: 0.1rem;
+				width: 100%;
+				background: white;
+				margin-bottom: 0.1rem;
+			}
+			#xia>p{
+				width: 96%;
+				margin: 0 auto;
+				height: 0.5rem;
+				font-size:0.15rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;				
+			}
+			#xia>p:first-child{
+				border-bottom: 1px solid gray;
+			}
+			#xia>p:nth-child(2){
+				border-bottom: 1px solid gray;
+			}
+			#xia>p>span{
+				height: 0.3rem;
+			}
+			#xia>p>span>img{
+				width: 0.25rem;
+				height: 0.25rem;
+			}
+			#di{
+				margin-top: 0.1rem;
+				width: 100%;
+				background: white;
+				margin-bottom: 0.1rem;
+			}
+			#di>p{
+				width: 96%;
+				margin: 0 auto;
+				height: 0.5rem;
+				font-size:0.15rem;
+				display: flex;
+				align-items: center;		
+			}
+			#di>p:first-child{
+				border-bottom: 1px solid gray;
+			}
+			#di>p:nth-child(2){
+				border-bottom: 1px solid gray;
+			}
+			#di>p>span{
+				height: 0.3rem;
+				line-height: 0.3rem;
+			}
+			#di>p>span:last-child{
+				margin-left: 0.1rem;
+				font-size: 0.1rem;
+			}
+			#di>p>span>img{
+				width: 0.25rem;
+				height: 0.25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p><span><a href="dian.html"><img src="img/zuowo.png"/></a></span><span>店铺信息</span></p>
+			<div id="shang">
+				<p><img src="img/500712982.png"/></p>
+				<ul>
+					<li>千图网生鲜水果店</li>
+					<li><img src="img/youxuan.png"/> 9.82分</li>
+				</ul>
+				<p><span>+</span>关注</p>
+			</div>
+			<div id="zhong">
+				<ul>
+					<li>
+						<p>34</p>
+						<p>全部商品</p>
+					</li>
+					<li>
+						<p>0</p>
+						<p>上新</p>
+					</li>
+					<li>
+						<p>10</p>
+						<p>促销</p>
+					</li>
+					<li>
+						<p>2</p>
+						<p>店铺动态</p>
+					</li>
+				</ul>
+				<div>
+					<ul>
+						<li>商品评价</li>
+						<li>9.5分</li>
+						<li>高于同行48.1%</li>
+					</ul>
+					<ul>
+						<li>服务态度</li>
+						<li>9.4分</li>
+						<li>高于同行47.3%</li>
+					</ul>
+					<ul>
+						<li>物流速度</li>
+						<li>9.6分</li>
+						<li>高于同行47.3%</li>
+					</ul>
+				</div>
+			</div>
+			<div id="xia">
+				<p><span>联系商家</span><span><img src="img/lianxi.png"/></span></p>
+				<p><span>店铺二维码</span><span><img src="img/saomasoudan.png"/></span></p>
+				<p><span>证件照信息</span><span><img src="img/wodezhangdan.png"/></span></p>
+			</div>
+			<div id="di">
+				<p><span>店铺信息</span><span>千图网生鲜水果店、蔬菜、生鲜类商品，优惠多多</span></p>
+				<p><span>所在地区</span><span>杭州省杭州市</span></p>
+				<p><span>开店时间</span><span>2019-11-20</span></p>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+</html>

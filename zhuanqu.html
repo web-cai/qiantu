@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html body{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+			.box{
+				width: 100%;
+				height: 100%;
+				background: #f2f2f2;
+			}
+			.top{
+				width: 90%;
+				height: 0.74rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				color: white;
+				/* position: absolute; */
+				/* top: 0; */
+				/* margin-bottom: 0.5rem; */
+			}
+			.top>p{
+				height: 100%;
+				text-align: center;
+				line-height: 0.74rem;
+			}
+			.top>p:nth-child(1){
+				display: flex;
+				width: 15%;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.top>p:nth-child(1)>a{
+				display: flex;
+				width: 0.1rem;
+				height: 0.21rem;				
+			}
+			.top>p>a>img{
+				width: 0.1rem;
+				height: 0.21rem;
+			}
+			.top>p:nth-child(2){
+				width: 55%;
+				font-size: 0.2rem;
+				font-weight: bold;
+			}
+			.top>p:nth-child(3){
+				width: 20%;
+				/* text-align: right; */
+				font-size: 0.13em;
+				color: white;
+			}
+			.div{
+				width: 100%;
+				height: 2.4rem;
+				background: url(img/lingjuan.png) no-repeat;
+				background-size: 100% 100%;
+				color: white;
+			}
+			/* .midd{
+				
+			} */
+			.midd>p:first-child{
+				font-size: 0.13rem;
+			}
+			.midd>p{
+				margin-left: 0.3rem;
+			}
+			.midd>p:nth-child(2){
+				font-size: 0.25rem;
+			}
+			.midd>p:nth-child(3){
+				font-size: 0.15rem;
+			}
+			.midd>p:nth-child(4){
+				width: 0.68rem;
+				height: 0.24rem;
+				border-radius: 0.12rem;
+				background: #9447d0;
+				text-align: center;
+				line-height: 0.24rem;
+				font-size: 0.13rem;
+			}
+			.lie{
+				width: 95%;
+				height: 1.06rem;
+				margin:  0 auto;
+				border-radius: 0.1rem;
+				background: white;
+				display: flex;
+				justify-content: space-around;
+				margin-top: 0.2rem;
+			}
+			.lie>ul:first-child{
+				width: 0.9rem;
+				height: 0.9rem;
+				background: #fff7f9;
+				color: red;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0.1rem;
+			}
+			.lie>ul:first-child>li{
+				width: 50%;
+				text-align: center;
+			}
+			.lie>ul:first-child>li:first-child{
+				font-size: 0.1rem;
+			}
+			.lie>ul:first-child>li>span:last-child{
+				display: block;
+			}
+			.lie>ul:first-child>li:first-child>span:first-child{
+				font-size: 0.2rem;
+				font-weight: bold;
+			}
+			.lie>ul:first-child>li>span:last-child{
+				font-size: 0.15rem;
+			}
+			.lie>ul:last-child{
+				width: 2.4rem;
+				height: 0.9rem;
+				font-size: 0.15rem;
+			}
+			.lie>ul:last-child>li{
+				width: 100%;
+			}
+			.lie>ul:last-child>li:first-child{
+				font-size: 0.15rem;
+				font-weight: bold;
+				margin-top: 0.1rem;
+			}
+			.lie>ul:last-child>li:first-child>span{
+				width: 0.18rem;
+				height: 0.18rem;
+				background: red;
+				display: inline-block;
+				text-align: center;
+				line-height: 0.18rem;
+				color: white;
+				font-size: 0.12rem;
+				border-radius: 0.05rem;
+			}
+			.lie>ul:last-child>li:nth-child(2){
+				font-size: 0.12rem;
+				color: #999999;
+				/* margin-top: 0.1rem; */
+			}
+			.lie>ul:last-child>li:nth-child(3){
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 0.15rem;
+			}
+			.lie>ul:last-child>li:nth-child(3)>p:first-child{
+				width: 1.45rem;
+				height: 0.19rem;
+				font-size: 0.1rem;
+				text-align: center;
+				line-height: 0.19rem;
+				border: 1px solid red;
+				border-radius: 0.05rem;
+				/* display: flex; */
+				/* justify-content: flex-start; */
+				position: relative;
+			}
+			.lie>ul:last-child>li:nth-child(3)>p:first-child>span{
+				transform: scale(0.78);
+				display: inline-block;
+				color: red;
+				width: 3rem;
+				position: absolute;
+				left: -0.78rem;
+				font-weight: bold;
+			}
+			.lie>ul:last-child>li:nth-child(3)>p:last-child{
+				width: 0.68rem;
+				height: 0.28rem;
+				border-radius: 0.14rem;
+				color: white;
+				text-align: center;
+				line-height: 0.28rem;
+				background: #f63c61;
+				font-size: 0.14rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="div">
+				<div class="top">
+					<p><a href="dian.html"><img src="img/lingzhuan.png" ></a></p>
+					<p>领券专区</p>
+					<p>我的优惠券</p>
+				</div>
+				<div class="midd">
+					<p>#家的味道#</p>
+					<p>专区满199减100</p>
+					<p>这些水果让你回忆家乡味道</p>
+					<p><span>查看更多</span></p>
+				</div>
+			</div>
+			<div class="lie">
+				<ul>
+					<li>￥<span>20</span>
+						<span>抵用券</span>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<span>券</span>
+						生鲜专用券
+					</li>
+					<li>有效期至：2019-11-26</li>
+					<li>
+						<p><span>满10元可用、限最新版客户端使用</span></p>
+						<p><span>立即领取</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="lie">
+				<ul>
+					<li>￥<span>6</span>
+						<span>抵用券</span>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<span>券</span>
+						外卖商家券：千千水果店
+					</li>
+					<li>有效期至：2019-11-28</li>
+					<li>
+						<p><span>满10元可用、限最新版客户端使用</span></p>
+						<p><span>立即领取</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="lie">
+				<ul>
+					<li>￥<span>3</span>
+						<span>抵用券</span>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<span>券</span>
+						下单返券
+					</li>
+					<li>有效期至：2019-11-30</li>
+					<li>
+						<p><span>满10元可用、限最新版客户端使用</span></p>
+						<p><span>立即领取</span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

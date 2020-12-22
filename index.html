@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100%;
+				/*height: 20rem;*/
+				position: relative;
+			}
+			#box>p:first-child{
+				width: 98%;
+				height: 7rem;
+				display: flex;
+				align-items: center;
+				margin: 0 auto;
+			}
+			#box>p:first-child>img{				
+				width: 100%;
+			}
+			#daohang{
+				margin-top: 2rem;
+				width: 100%;
+				display: flex;
+			}
+			#daohang>p:first-child{
+				width: 8.4rem;
+				height: 8.4rem;
+				margin-left: 1rem;
+			}
+			#daohang>p:first-child>img{
+				width: 100%;
+			}
+			#daohang>p:nth-child(2){
+				width: 86rem;
+				display: flex;
+				/*width: 8.4rem;*/
+				height: 8.4rem;
+				border-radius:4.2rem;
+				align-items: center;
+			}
+			span{
+				display: inline-block;
+			}
+			#daohang>p:nth-child(2){
+				margin-left: 2rem;
+				height: 8.4rem;
+				/*border: 1px solid black;*/
+				align-items: center;
+				background: gainsboro;
+			}
+			#daohang>p:nth-child(2)>input{
+				width: 60rem;
+				margin-left: 1rem;
+				height: 4rem;
+				border: 0px;
+				font-size: 4rem;
+				background-color: gainsboro;
+			}
+			#daohang>p:nth-child(2)>span:first-child{
+				margin-left: 2rem;
+				width: 3.9rem;
+				height: 5rem;
+			}
+			#daohang>p:nth-child(2)>span:first-child>img{
+				width: 100%;
+			}
+			#daohang>p:last-child{
+				width: 8.4rem;
+				height: 8.4rem;
+				display: flex;
+				align-items: center;
+				flex-direction: row-reverse;
+			}
+			#daohang>p:last-child>img{
+				width: 6rem;
+				height: 6rem;				
+			}
+			#tobu{
+				width: 100%;
+				background: #171717;
+				margin-top: 2rem;
+			}
+			#tobu>ul{
+				color: white;
+				display: flex;
+				justify-content: space-around;
+				font-size: 2rem;
+				text-align: center;
+			}
+			#tobu>ul>li{
+				width: 21.6rem;
+				height:7rem;
+				padding-top: 2rem;
+				padding-bottom: 6rem;
+			}
+			#tobu>ul>li>p{
+				margin-top: 1rem;
+				font-size: 2rem;
+			}
+			#tobu>ul>li:hover{
+				background:#2fd7a6 ;
+			}
+			#tobu>ul>li>p>img{
+				width: 6rem;
+				height: 5.6rem;
+			}
+			.swiper-container{
+				width: 100%;
+				height: 37.4rem;
+			}
+			.swiper-slide>img{
+				width: 100%;
+			}
+			.swiper-pagination span{
+				width: 8rem;
+				height: 1rem;
+				border-radius: 0;
+			}
+			#neirong{
+				width: 100%;
+				border-bottom: 12px solid #F8F8F8;
+				padding-bottom: 3rem;
+			}
+			#nei{
+				width: 96%;
+				height: 6rem;
+				padding-top: 2rem;
+				padding-bottom:2rem ;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+			}
+			#nei>p:first-child{
+				width: 5.6rem;
+				height: 5.8rem;
+			}
+			#nei>p:first-child>img{
+				width: 100%;
+			}
+			#nei>p:nth-child(2){
+				margin-left: 1rem;
+				font-size: 3.6rem;
+				color: #2dd7a8;
+			}
+			#nei>p:nth-child(3){
+				margin-left: 1rem;
+				font-size: 2.6rem;
+				color: #999999;
+			}
+			#nei1{
+				width: 96%;
+				height: 53rem;
+				margin: 0 auto;
+				/*border:1px solid black ;*/
+				display: flex;
+			}
+			#nei1>#left{
+				background: #fc8d56;
+				width: 40%;
+				height: 53rem;
+				position: relative;
+			}
+			#nei1>#left>p{
+				margin-left: 2rem;
+				color: white;
+			}
+			#nei1>#left>p:first-child{
+				padding-top:2rem ;
+				padding-bottom:1rem ;
+				font-size: 4rem;				
+			}
+			#nei1>#left>p:nth-child(2){
+				background: white;
+				width: 3rem;
+				border: 2px solid white;
+				margin-bottom: 1rem;		
+			}
+			#nei1>#left>p:nth-child(3){
+				font-size: 3rem;	
+			}
+			#nei1>#left>p:nth-child(4){
+				font-size: 3rem;	
+			}
+			#nei1>#left>p:nth-child(5){
+				margin-top: 3rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 26rem;
+				height: 26rem;
+				background: white;
+				position: relative;
+			}
+			#nei1>#left>p:nth-child(5)>span:nth-child(2){
+				width: 3rem;
+				height: 20rem;
+				/*border: 1px solid black;*/
+				background: white;
+				position: absolute;
+				left: 26rem;
+				bottom: 0rem;
+				opacity: 0.8;
+			}
+			#nei1>#left>p:nth-child(5)>span:last-child{
+				width: 6rem;
+				height: 18rem;
+				/*border: 1px solid black;*/
+				background: white;
+				position: absolute;
+				left: 26rem;
+				bottom: 0rem;
+				opacity: 0.5;
+			}
+			#nei1>#left>p:nth-child(5)>img{
+				width: 22.9rem;
+				height: 19.7rem;
+			}
+			#nei1>#left>p:nth-child(6){
+				background: red;
+				font-size: 2rem;
+				height: 4.2rem;
+				width: 12rem;
+				line-height: 4.2rem;
+				text-align: center;
+				border-radius: 6rem;
+				position: absolute;
+				bottom: 8rem;
+				left: 2rem;
+			}
+			#nei1>#right{
+				width: 100%;
+				width: 60%;
+				height: 53rem;
+			}
+			#nei1>#right>#top{
+				width: 100%;		
+				height: 50%;
+				display: flex;
+				/*border: 1px solid red;*/
+				align-items: center;
+			}
+			#nei1>#right>#top>ul{
+				/*border: 1px solid black;*/
+				width: 50%;
+				margin-left: 6rem;
+			}
+			#nei1>#right>#top>p{
+				display: flex;
+				justify-content: center;
+				width: 50%;
+			}
+			#nei1>#right>#top>p>img{
+				width: 19.9rem;
+				height: 13.6rem;
+			}
+			#nei1>#right>#top>ul>li:first-child{
+				font-size: 4rem;
+				color: #9f7c38;
+			}
+			#nei1>#right>#top>ul>li:nth-child(2){
+				font-size: 3rem;
+				color: #666666;
+			}
+			#nei1>#right>#top>ul>li:nth-child(3){
+				width: 16rem;
+				border: 1px solid #fb8e56;
+				border-radius: 8rem;
+				font-size: 3rem;
+				height: 4.6rem;
+				text-align: center;
+				line-height:4.6rem;
+				color: #fb8e56;
+			}
+			#nei1>#right>#bottom{
+				width: 100%;
+				display: flex;
+			}
+			#bottom>ul{
+				padding-top: 0.5rem;				
+				width: 50%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			#bottom>ul:first-child{
+				border-bottom: 1px solid #eeeeee;
+				border-top: 1px solid #eeeeee;
+			}
+			#bottom>ul:last-child{
+				border: 1px solid #eeeeee;
+			}
+			#bottom>ul:first-child>li:first-child{
+				margin-right: 2rem;
+				font-size: 4rem;
+				color: #d3396b;
+			}
+			#bottom>ul:last-child>li:first-child{
+				margin-right: 5rem;
+				font-size: 4rem;
+				color: #fb8c57;
+			}
+			#bottom>ul>li:nth-child(2){
+				font-size: 3.5rem;
+				color: #676767;
+			}
+			#bottom>ul:first-child>li:last-child>img{
+				width: 13.6rem;
+				height: 12.6rem;
+			}
+			#bottom>ul:last-child>li:last-child>img{
+				width: 18.3rem;
+				height: 14.6rem;
+			}
+			#xia{
+				width: 100%;
+			}
+			#xia1{
+				width: 100%;
+				display: flex;
+				border-bottom:1px solid gainsboro ;
+			}
+			#xia1>ul{
+				width: 36rem;
+				border-top: 1px solid gainsboro;
+			}
+			#xia1>ul:first-child{
+				width: 36rem;
+				border-right: 1px solid gainsboro;
+			}
+			#xia1>ul:last-child{
+				width: 36rem;
+				border-left: 1px solid gainsboro;
+			}
+			#xia1>ul>li{
+				margin-left: 2rem;
+			}
+			#xia1>ul>li:first-child{
+				font-size: 3rem;
+				color: #000000;
+			}
+			#xia1>ul>li:nth-child(2){
+				font-size: 2.5rem;
+				color: #999999;
+			}
+			#xia1>ul>li:nth-child(3){
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+				width: 23rem;
+				height: 21rem;
+			}
+			#xia1>ul>li:nth-child(3)>img{
+				width: 23rem;
+				height: 21rem;
+			}
+			#xia1>ul>li:nth-child(4){
+				font-size: 2.5rem;
+				color: #2DD7A8;
+			}
+			#box>p{
+				width: 100%;
+			}
+			#box>p>img{
+				width: 100%;
+			}
+			#ding{
+				width: 100%;
+				height: 13rem;
+				/*border: 1px solid black;*/
+				box-shadow: 0 0 2px #676767;
+				position: fixed;
+				background: white;
+				bottom: 0rem;				
+			}
+			#ding>ul{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			#ding>ul>li{
+				width:21.25rem;
+				font-size: 3rem;
+				height: 13rem;
+				text-align: center;
+				/*border: 1px solid black;*/			
+			}
+			/*#ding>ul>li:hover{
+				border-radius: 6.5rem;
+				background: #3FDAAD;
+				color: white;
+			}
+			#ding>ul>li>p:first-child{
+				background: url(img/分类_05.png) no-repeat;
+				background-position:7.6rem 0 ;
+				z-index: 55;
+			}*/
+			#ding>ul>li>p:first-child{
+				margin-top:2rem ;
+			}
+			#ding>ul>li>p:first-child>img{
+				width: 6.2rem;
+				height: 6.2rem;
+			}
+			#ding>ul>li>p:last-child{
+				margin-bottom:1rem ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p><img src="img/zhuangtai.png"/></p>
+			<div id="daohang">
+				<p><img src="img/logo-.png"/></p>
+				<p><span><img src="img/sousuo.png"/></span><input type="text" name="" id="" value="" placeholder="搜索商品"/></p>
+			    <p><img src="img/buhuo.JPG"/></p>
+			</div>
+			<div id="tobu">
+				<ul>
+					<li>
+						<p><img src="img/jingxuan.png"/></p>
+						<p>精选</p>
+					</li>
+					<li>
+						<p><img src="img/xinxian.png"/></p>
+						<p>水果</p>
+					</li>
+					<li>
+						<p><img src="img/sheng-cai.png"/></p>
+						<p>蔬菜</p>
+					</li>
+					<li>
+						<p><img src="img/haixian.png"/></p>
+						<p>海鲜</p>
+					</li>
+					<li>
+						<p><img src="img/dianjing.png"/></p>
+						<p><a href="dian.html" style="color: white;">商家</a></p>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/banner.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/banner.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/banner.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/banner.jpg"/></div>
+			        <div class="swiper-slide"><img src="img/banner.jpg"/></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+			<div id="neirong">
+				<div id="nei">
+					<p><img src="img/remai.png"/></p>
+					<p>今日推荐</p>
+			     	<p>精选商品抢购中</p>
+				</div>
+			    <div id="nei1">
+			    	<div id="left">
+			    		<p>超值专区抢购</p>
+			    		<p></p>
+			    		<p>最低10元起</p>
+			    		<p>领劵满99减20</p>
+			    		<p><img src="img/caokao.png"/>
+			    		   <span></span>
+			    		   <span></span>
+			    		</p>
+			    		<p>19.8元起</p>
+			    		<!--<p></p>
+			    		<p></p>-->
+			    	</div>
+			    	<div id="right">
+			    		<div id="top">
+			    			<ul>
+				    			<li>农产品直营</li>
+				    			<li>官方采购</li>
+				    			<li>满99减20</li>
+				    		</ul>
+				    		<p><img src="img/mihotao.png"/></p>
+			    		</div>
+			    		<div id="bottom">
+			    			<ul>
+			    				<li>生鲜旺季</li>
+			    				<li>满满的幸福</li>
+			    				<li><img src="img/huolong.png"/></li>
+			    			</ul>
+			    			<ul>
+			    				<li>超值优惠</li>
+			    				<li>先领卷再购物</li>
+			    				<li><img src="img/cheng-kao.png"/></li>
+			    			</ul>
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+			<div id="xia">
+				<div id="nei">
+					<p><img src="img/lingshouliang.png"/></p>
+					<p>新品上线</p>
+			     	<p>精选商品抢购中</p>
+				</div>
+				<div id="xia1">
+					<ul>
+						<li><a href="xiangqing.html">传奇香橙</a></li>
+						<li>清香型水果</li>
+						<li><img src="img/cheng.png"/></li>
+						<li>￥29.00起</li>
+					</ul>
+					<ul>
+						<li><a href="xiangqing.html">草莓多多</a></li>
+						<li>清香型水果</li>
+						<li><img src="img/cao.png"/></li>
+						<li>￥29.00起</li>
+					</ul>
+					<ul>
+						<li><a href="xiangqing.html">甜柠檬</a></li>
+						<li>清香型水果</li>
+						<li><img src="img/ningmeng.png"/></li>
+						<li>￥29.00起</li>
+					</ul>
+				</div>
+			</div>
+			<!--<p><img src="img/首页_02.png"/></p>-->
+			<div id="ding">
+				<ul>					
+					<li>
+						<p><img src="img/gowudai1.png"/></p>
+						<p><a href="index.html" style="color: #15D29A;">首页</a></p>
+					</li>
+					<li>
+						<p><img src="img/fenleiyi.png"/></p>
+						<p><a href="fanfan.html">分类</a></p>
+					</li>
+					<li>
+						<p><img src="img/fenleiliu.png"/></p>
+						<p><a href="gowu.html">购物车</a></p>
+					</li>
+					<li>
+						<p><img src="img/wowo_09.png"/></p>
+						<p><a href="wode.html">我的</a></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container',{
+			loop:true,
+			pagination: {
+			    el: '.swiper-pagination',
+			  },
+			  autoplay:true,
+			})
+	</script>
+</html>
